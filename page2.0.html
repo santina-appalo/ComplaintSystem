@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTCL Complaint Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="C:\Users\Santina Appalo\OneDrive\Desktop\Projects\CSS\pg2.css">
+</head>
+
+<style>
+    
+    .mainform{
+    margin: 50px 230px 50px 230px;
+    padding: 2rem;
+    border: 1px solid rgb(224,224,224) ;
+    border-radius: 10px;
+    
+    background-color: white;
+    display: flex;
+    }
+
+    .hidden {
+    display: none;
+    }
+
+
+    .header{
+        font-size: 17px;
+        font-family: candara;
+        display: flex-end;
+    }
+
+    input[type=text], select, textarea {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+@media screen and (max-width: 680px) {
+  .header, .mainform, input[type=submit] {
+    margin: 0px 0px 0px 0px;
+    
+  }
+}
+
+
+</style>
+
+<body style="background-color: #831238;">
+    <div> 
+        <img src="C:\Users\Santina Appalo\OneDrive\Desktop\Projects\Media\satlogo.jpg" alt="logo"></img>
+
+    </div>
+    <div class= "mainform">
+    <form>
+
+
+    <!--Header-->
+
+    <div class = "header">
+    <h1><b>Complaint Form</b></h1>
+    <p>Please send us details about the incident you would like to report.Kindly type in the student's Register Number to auto-fill the other information.</p>
+
+        
+          <hr/>
+    </div>
+    
+
+    <br>
+    <!-- regester-->
+
+    <div class="form-group">
+        <label for="fname"><b>Register Number:</b></label>
+        <input type="text" class="form-control" id="fname" placeholder="Enter Register Number " name="fname">
+      </div>
+      <br>
+    <!-- name-->
+      <div class="form-group">
+        <label for="name"><b> Name:</b></label> 
+        <input type="text" class="form-control" id="lname" placeholder="Enter Name" name="lname">
+      </div>
+   
+      <br>
+       <!-- Select your year-->
+
+       <label for="Select Year"><b>Select Year</b></label>
+       <select id="year" name="year" >
+         <option value="----">----</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+        
+       </select>
+        
+       <br>
+      <!-- class-->
+
+      <div class="form-group">
+        <label for="class"> <b> Class: </b> </label>
+        <input type="text" id="class" class="form-control" placeholder="Enter Class:" name = "class" >
+      </div>
+    
+      <br>
+
+    <!-- Phone number-->
+    
+    <div class="form-group">
+        <label for="phoneNo"> <b> Phone Number: </b> </label>
+        <input type="text" id="phone" class="form-control" placeholder="Enter Landline Number" name = "phoneNo" >
+      </div>
+    
+      <br>
+     <!-- class co-->
+
+     <div class="form-group">
+        <label for="cood"> <b> Class Co-Ordinator: </b> </label>
+        <input type="text" id="cood" class="form-control" placeholder="Enter Class Co-Ordinator:" name = "cood" >
+      </div>
+    
+      <br>
+   
+    <!-- Category of complaint-->
+    
+    <div id="formsection">
+        <label><b>Type Of Complaint?</b></label>
+
+        <p><input type="checkbox" name="section" value="id">ID Card</p>
+        <p><input type="checkbox" name="section" value="dress">Dress code</p>
+        <p><input type="checkbox" name="section" value="late">Latecomer</p>
+        <p><input type="checkbox" name="section" value="bunk">Bunking</p>
+        <input type="checkbox" id="otherCheckbox">
+        <label for="otherCheckbox">Other</label>
+    
+        
+        <div id="otherTextFieldContainer" class="hidden">
+          <label for="otherTextField">Other Complaints:</label><br>
+          <input type="textfield" id="otherTextField" >
+        </div>
+        
+        <script>
+          const otherCheckbox = document.getElementById('otherCheckbox');
+          const otherTextFieldContainer = document.getElementById('otherTextFieldContainer');
+        
+          otherCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+              otherTextFieldContainer.classList.remove('hidden');
+            } else {
+              otherTextFieldContainer.classList.add('hidden');
+            }
+          });
+        </script>
+        <br>
+        <br>
+    <!--Submit Button-->
+    <button type="button" class="btn btn-outline-primary">Submit</button>
+    
+
+    </form>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+
+
+body{
+    position: absolute;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    height: 650px;
+    width: 800px;
+    border: 2px solid black;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.title{
+    margin: auto;
+}
+
+#greens{
+	background-color:white;
+    height: 95px;
+    justify-content: center;
+    align-items: center;
+
+}
+#hmm{border:1px solid white;
+    background-color: white;
+    margin:50px 50px 50px 50px;
+    padding:50px 50px 50px 50px;
+    background-image:url("C:\Users\Santina Appalo\OneDrive\Desktop\Projects\Media\satlogo.jpg");
+    text-align:left;
+}
+
+img{
+    width :400px;
+    height:100px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#otherTextField{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height:150px;
+    width: 100%;
+}
